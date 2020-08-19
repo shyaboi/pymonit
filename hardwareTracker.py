@@ -14,16 +14,15 @@ p = psutil.Process()
 #     while not e.wait(time):
 #         func()
 # interval set funtion
-dateF = datetime.datetime.fromtimestamp(p.create_time()).strftime("%Y-%m-%d %H:%M:%S")
+# dateF = datetime.datetime.fromtimestamp(p.create_time()).strftime("%Y-%m-%d %H:%M:%S")
 
 # def foo():
-#     mem = psutil.virtual_memory()
-#     date = datetime.datetime.fromtimestamp(
-#         p.create_time()).strftime("%Y-%m-%d %H:%M:%S")
-#     print('\033[94m'+date)
+# mem = psutil.virtual_memory()
+# date = datetime.datetime.fromtimestamp(p.create_time()).strftime("%Y-%m-%d %H:%M:%S")
+# print('\033[94m'+date)
 # all cpu cores including hyperthreads
-    # print('\033[92m'"cpu cores: "+str(psutil.cpu_count()))
-
+    # print('\033[92m'"cpu cores: "+)
+# coreCount = str(psutil.cpu_count())
 # logical/pysical core
     # print("pysical cores: " + str(psutil.cpu_count(logical=False)))
 
