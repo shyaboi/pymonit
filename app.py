@@ -27,7 +27,7 @@ def clock():
     rootDiskU = "root disk usage: "+str(psutil.disk_usage('/'))
     diskRR = "Root disk read/write: "+str(psutil.disk_io_counters(perdisk=False, nowrap=True))
     cpuFr = "freeq"+str(psutil.cpu_freq(percpu=True)[0])
-
+    batt ="Battery: "+ str(psutil.sensors_battery())
     #updating labels
     thing.config(text="Time: "+hour + ":"+minn+";"+sec)
     thing2.config(text="CPU Core utilization: "+cores)
@@ -37,7 +37,7 @@ def clock():
     thing6.config(text=cppu)
     thing7.config(text=rootDiskU)
     thing8.config(text=diskRR)
-    thing9.config(text=cpuFr)
+    thing9.config(text=batt)
 
 #clock infor replacement loop
     thing.after(500, clock)
